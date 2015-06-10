@@ -147,7 +147,7 @@ hist(sumSteps1, breaks = 60, xlim = c(0,25000), ylim = c(0,15), col = "cadetblue
 meandif <- mean(sumSteps, na.rm = T) - mean(sumSteps1,  na.rm = T)
 meddif <- median(sumSteps, na.rm = T) - median(sumSteps1,  na.rm = T)
 ```
-###The dataset had 2304 missing values, which where filled with the average for the corresponding 5 minute interval. After creating a new dataset with the filled values and calculating the mean and the median,  there was no difference between the mean of the new dataset and the mean from the original dataset,, but there was a diference of -1.1886792 when comparing the median of both datasets.
+The dataset had 2304 missing values, which where filled with the average for the corresponding 5 minute interval. After creating a new dataset with the filled values and calculating the mean and the median,  there was no difference between the mean of the new dataset and the mean from the original dataset,, but there was a diference of -1.1886792 when comparing the median of both datasets.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 1. Create a new factor variable in the dataset with two levels -- "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.

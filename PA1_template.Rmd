@@ -92,7 +92,7 @@ hist(sumSteps1, breaks = 60, xlim = c(0,25000), ylim = c(0,15), col = "cadetblue
 meandif <- mean(sumSteps, na.rm = T) - mean(sumSteps1,  na.rm = T)
 meddif <- median(sumSteps, na.rm = T) - median(sumSteps1,  na.rm = T)
 ```
-###The dataset had `r length(naIndex)` missing values, which where filled with the average for the corresponding 5 minute interval. After creating a new dataset with the filled values and calculating the mean and the median,  there was no difference between the mean of the new dataset and the mean from the original dataset,, but there was a diference of `r meddif` when comparing the median of both datasets.
+The dataset had `r length(naIndex)` missing values, which where filled with the average for the corresponding 5 minute interval. After creating a new dataset with the filled values and calculating the mean and the median,  there was no difference between the mean of the new dataset and the mean from the original dataset,, but there was a diference of `r meddif` when comparing the median of both datasets.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 1. Create a new factor variable in the dataset with two levels -- "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
@@ -117,7 +117,7 @@ int.nd <- tapply(allweekend$steps, allweekend$interval, mean)
 int.dy <- tapply(allweekdays$steps, allweekdays$interval, mean)
 df.nd <- as.data.frame(int.nd)
 df.dy <- as.data.frame(int.dy)
-par(mfrow=c(2,1), pin(1,2))
+par(mfrow=c(2,1))
 plot.ts(df.nd, xlab = "Interval", ylab = "average steps", main = "WEEKEND", las = 3)
 plot.ts(dff, xlab = "Interval", ylab = "average steps", main = "WEEKDAY", las = 3)
 ```
